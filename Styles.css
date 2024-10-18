@@ -103,6 +103,7 @@ p {
 .services-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .service {
@@ -112,44 +113,14 @@ p {
     width: 25%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 10px; /* Add margin for spacing */
 }
 
 .service h3 {
     margin-bottom: 10px;
 }
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-    <div class="container" data-aos="fade-up">
-        <h2>Our Work</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <a href="https://example.com/project1" target="_blank">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p>Project 1</p>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="https://example.com/project2" target="_blank">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p>Project 2</p>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="https://example.com/project3" target="_blank">
-                    <img src="project3.jpg" alt="Project 3">
-                    <p>Project 3</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-.Project1-img {
-    width: 300px; /* Adjust the size here */
-    height: auto; /* Maintain the aspect ratio */
-}
-/* Flexbox for Portfolio Grid */
+/* Portfolio Section */
 .portfolio-grid {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap onto the next row */
@@ -157,7 +128,7 @@ p {
 }
 
 .portfolio-item {
-    flex-basis: 50%; /* Each item takes 30% of the row */
+    flex-basis: 30%; /* Each item takes 30% of the row */
     max-width: 30%;
     margin-bottom: 20px; /* Space between rows */
     text-align: center;
@@ -167,6 +138,11 @@ p {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Zoom-in effect */
 }
 
 .portfolio-item p {
@@ -175,29 +151,20 @@ p {
     color: #333;
 }
 
-.portfolio-item img {
-    width: 60%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.05); /* Zoom-in effect */
-}
-
 .portfolio-item a {
     text-decoration: none;
     color: #333;
 }
 
-/* Contact */
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 50%;
     padding: 10px;
     margin: 10px 0;
@@ -216,4 +183,73 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* More width for smaller screens */
+    }
+
+    nav ul {
+        display: flex; /* Show navigation links in a row */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        background-color: #333;
+        width: 100%;
+        left: 0;
+        display: none; /* Hide links by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show links when activated */
+    }
+
+    nav h1 {
+        font-size: 24px; /* Smaller title for mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 40px; /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 20px; /* Smaller description for mobile */
+    }
+
+    .services-list {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center; /* Center align services */
+    }
+
+    .service {
+        width: 90%; /* Full width for services on mobile */
+    }
+
+    .portfolio-item {
+        flex-basis: 100%; /* Full width for portfolio items on mobile */
+        max-width: 100%;
+    }
+
+    form input,
+    form textarea {
+        width: 90%; /* Wider input fields on mobile */
+    }
+
+    /* Adjust font sizes on smaller screens */
+    h2 {
+        font-size: 30px; /* Smaller h2 for mobile */
+    }
+
+    p {
+        font-size: 16px; /* Smaller paragraph text for mobile */
+    }
 }
