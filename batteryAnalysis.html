@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Battery Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Back Button -->
+<div class="container">
+    <div class="button-container">
+        <a href="javascript:history.back()" class="btn">Back to Previous Page</a>
+    </div>
+</div>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <h2>Battery Analysis for Mobile Applications</h2>
+    </div>
+</header>
+
+<!-- Project Details Section -->
+<section id="project-details">
+    <div class="container">
+        <h1>Case Study</h1>
+
+        <section class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#importance">1. Importance of Battery Analysis in Mobile Apps</a></li>
+                <li><a href="#tools">2. Tools for Battery Analysis</a></li>
+                <li><a href="#android">3. Battery Analysis for Android Using Trepn Profiler</a></li>
+                <li><a href="#ios">4. Battery Analysis for iOS Using Xcode Energy Gauge</a></li>
+                <li><a href="#best-practices">5. Best Practices for Battery Efficiency</a></li>
+                <li><a href="#conclusion">6. Conclusion</a></li>
+            </ul>
+        </section>
+
+        <section id="importance">
+            <h2>1. Importance of Battery Analysis in Mobile Apps</h2>
+            <p>Battery consumption is a critical factor for user experience in mobile apps. Apps that drain a device’s battery quickly are often uninstalled by users. Conducting thorough battery analysis allows developers and testers to:</p>
+            <ul>
+                <li>Optimize app performance.</li>
+                <li>Ensure battery efficiency.</li>
+                <li>Identify high power-consuming activities like background processes, network calls, and use of device sensors.</li>
+            </ul>
+        </section>
+
+        <section id="tools">
+            <h2>2. Tools for Battery Analysis</h2>
+            <p>Some of the commonly used tools for battery analysis are:</p>
+            <ul>
+                <li><strong>Trepn Profiler (Android):</strong> Developed by Qualcomm, Trepn Profiler is an open-source tool for analyzing energy consumption on Android devices. It provides insights into CPU usage, battery consumption (in mW), and other power-related metrics.</li>
+                <li><strong>Xcode Energy Gauge (iOS):</strong> Xcode’s built-in Energy Gauge tool helps monitor the power consumption of iOS apps running on physical devices. It provides visual feedback on battery consumption, CPU usage, and other energy-intensive operations.</li>
+            </ul>
+        </section>
+
+        <section id="android">
+            <h2>3. Battery Analysis for Android Using Trepn Profiler</h2>
+            <h3>3.1 Installation and Setup</h3>
+            <ul>
+                <li>Download Trepn Profiler from the Google Play Store or the Qualcomm Developer Network.</li>
+                <li>Install the app on the Android device you wish to test.</li>
+            </ul>
+
+            <h3>3.2 Performing Battery Analysis</h3>
+            <ul>
+                <li>Launch Trepn Profiler on the Android device.</li>
+                <li>Select Profiling Settings:</li>
+                <ul>
+                    <li>Open Trepn Profiler and choose the profiling options you want to monitor, such as:</li>
+                    <ul>
+                        <li>Battery Power (mW)</li>
+                        <li>CPU Usage</li>
+                        <li>Network Activity</li>
+                        <li>Memory Usage</li>
+                    </ul>
+                </ul>
+                <li>Launch the app you want to test on your device.</li>
+                <li>Let it run through normal user interactions or specific test scenarios, while Trepn monitors the power consumption in real time.</li>
+                <li>Monitor power-intensive areas like background processes or network sync activities.</li>
+            </ul>
+
+            <h3>3.3 Exporting and Analyzing Data</h3>
+            <ul>
+                <li>Save the session for later analysis.</li>
+                <li>Export the data as CSV files for deeper analysis.</li>
+                <li>Use the graphical reports or exported data to identify high battery consumption sections and optimize them for better performance.</li>
+            </ul>
+        </section>
+
+        <section id="ios">
+            <h2>4. Battery Analysis for iOS Using Xcode Energy Gauge</h2>
+            <h3>4.1 Setup with Xcode</h3>
+            <ul>
+                <li>Install Xcode from the Mac App Store if not already installed.</li>
+                <li>Connect the iOS device you wish to test (iPhone or iPad).</li>
+            </ul>
+
+            <h3>4.2 Performing Battery Analysis</h3>
+            <ul>
+                <li>Open your app project in Xcode and run it on the connected device.</li>
+                <li>Open the Energy Gauge in Xcode via <code>Window > Devices and Simulators > Energy</code>.</li>
+                <li>Monitor the visual chart showing energy impact, CPU usage, disk, network, and graphics usage.</li>
+                <li>Simulate different network conditions, screen brightness, or user activity to observe the impact on battery usage.</li>
+            </ul>
+
+            <h3>4.3 Analyzing Data</h3>
+            <ul>
+                <li>Analyze the energy impact report to identify power-hungry sections of the app.</li>
+                <li>Review metrics like CPU usage and network activity to optimize for better battery performance.</li>
+            </ul>
+        </section>
+
+        <section id="best-practices">
+            <h2>5. Best Practices for Battery Efficiency</h2>
+            <ul>
+                <li>Optimize background services to ensure they are necessary and efficiently managed.</li>
+                <li>Avoid unnecessary network calls, especially on mobile data.</li>
+                <li>Reduce wake locks to prevent the device from staying awake unnecessarily.</li>
+                <li>Minimize the use of power-intensive sensors like GPS, accelerometers, and cameras.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>6. Conclusion</h2>
+            <p>Battery analysis is a crucial part of mobile app testing. Tools like Trepn Profiler and Xcode Energy Gauge provide valuable insights into how apps impact battery performance. By regularly testing and optimizing battery consumption, developers and testers can ensure a better user experience and longer battery life for mobile users.</p>
+        </section>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Swaroop K. Phone no. - +91 8670124978, email - swaroopkumar.sk@gmail.com. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

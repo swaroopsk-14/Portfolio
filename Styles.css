@@ -100,24 +100,63 @@ p {
 }
 
 /* Services */
-.services-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+a {
+    text-decoration: none;
+    color: inherit; /* Prevent default link color, inherit parent's color */
 }
 
 .service {
-    background: #fff;
-    padding: 15px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
     border-radius: 10px;
-    width: 25%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     text-align: center;
-    margin: 10px; /* Add margin for spacing */
+    border: 2px solid transparent; /* No border initially */
+    color: #333;
 }
 
 .service h3 {
     margin-bottom: 10px;
+}
+
+.service p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    background-color: #f5f5f5; /* Light background change on hover */
+    border-color: #ff6347; /* Add a subtle border color on hover */
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Remove blue outline on click */
+a:focus, a:active {
+    outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .service {
+        flex-basis: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop responsiveness */
+@media (min-width: 768px) {
+    .service {
+        flex-basis: 45%; /* Two services per row on larger screens */
+    }
 }
 
 /* Portfolio Section */
@@ -252,4 +291,142 @@ footer {
     p {
         font-size: 16px; /* Smaller paragraph text for mobile */
     }
+
+
+
+    /*Battery analysis */
+     body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+                background-color: #f9f9f9;
+                text-align = center;
+            }
+
+            h1, h2, h3 {
+                color: #ff6347;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                margin-top: 30px;
+                border-bottom: 2px solid #ff6347;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                margin-left: 20px;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            code {
+                background-color: #f4f4f4;
+                padding: 2px 6px;
+                border-radius: 5px;
+            }
+
+            .toc ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .toc ul li {
+                margin-bottom: 5px;
+            }
+
+            .toc a {
+                text-decoration: none;
+                color: #ff6347;
+            }
+
+            .toc a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+            }
+
+         /* Button Styles */
+         .button-container {
+             display: flex;                  /* Use flexbox for alignment */
+             justify-content: flex-end;     /* Align items to the right */
+             margin-top: 20px;              /* Margin at the top for spacing */
+         }
+
+         /* Button Styles */
+         body {
+             margin: 0;
+             font-family: Arial, sans-serif; /* Set a default font */
+         }
+
+         /* Container styles */
+         .container {
+             width: 90%;
+             max-width: 1200px;
+             margin: auto;
+             padding: 20px;
+         }
+
+         /* Flexbox for the back button */
+         .button-container {
+             display: flex;                  /* Use flexbox for alignment */
+             justify-content: flex-end;     /* Align items to the right */
+             margin-top: 20px;              /* Margin at the top for spacing */
+         }
+
+         /* Button Styles */
+         body {
+             margin: 0;
+             font-family: Arial, sans-serif; /* Set a default font */
+         }
+
+         /* Container styles */
+         .container {
+             width: 90%;
+             max-width: 1200px;
+             margin: auto;
+             padding: 20px;
+         }
+
+         /* Flexbox for the back button */
+         .button-container {
+             display: flex;                  /* Use flexbox for alignment */
+             justify-content: flex-end;     /* Align items to the right */
+             margin-top: 20px;              /* Margin at the top for spacing */
+         }
+
+         /* Button Styles */
+         .btn {
+             display: inline-block;          /* Makes the button an inline-block */
+             padding: 10px 20px;            /* Padding for top/bottom and left/right */
+             background-color: #ff6347;     /* Button background color */
+             color: white;                  /* Text color */
+             text-decoration: none;         /* No underline for links */
+             border-radius: 5px;            /* Rounded corners */
+             transition: background-color 0.3s ease; /* Smooth transition for background color */
+         }
+
+         .btn:hover {
+             background-color: #ff4500;     /* Darker color on hover */
+         }
+
+
+
 }
